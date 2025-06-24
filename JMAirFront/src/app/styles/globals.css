@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 기본 마진 및 패딩 제거 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-geist-sans);
+}
+
+/* 컨테이너 스타일 */
+.container {
+  max-width: 1200px;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #f3f3f3;
+  padding: 20px;
+  text-align: center;
+}
