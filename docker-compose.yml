@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: jmair
+      MYSQL_USER: jmair
+      MYSQL_PASSWORD: jmair
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  backend:
+    build: ./JMAirBack
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/jmair
+      SPRING_DATASOURCE_USERNAME: jmair
+      SPRING_DATASOURCE_PASSWORD: jmair
+    ports:
+      - "8080:8080"
+  frontend:
+    build: ./JMAirFront
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+volumes:
+  db-data:
