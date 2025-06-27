@@ -37,3 +37,21 @@ export function getGradeText(grade: string): string {
       return "알 수 없음";
   }
 }
+
+
+export function getUsedStateText(state: string): string {
+  switch (state) {
+    case "SALE":
+      return "판매중";
+    case "RESERVATION":
+      return "예약중";
+    case "COMPLETION":
+      return "판매완료";
+    case "CANCEL":
+      return "구매취소";
+    case "FALLSE":
+      return "판매취소";
+    default:
+      return state;
+  }
+}

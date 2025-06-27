@@ -19,7 +19,7 @@ export function MemberFilterBar({ grade, status, onGradeChange, onStatusChange, 
       >
         <option value="">전체 등급</option>
         <option value="USER">일반회원</option>
-        <option value="ENGINEER">설기사</option>
+        <option value="ENGINEER">설치기사</option>
         <option value="ADMIN">관리자</option>
         <option value="SUPERADMIN">최고관리자</option>
         <option value="ADMINWATCHER">임시관리자</option>

@@ -27,7 +27,6 @@ export default function AdminSidebar() {
           {[
             { href: "/admin/estimate", label: "견적 신청 관리" },
             { href: "/admin/as", label: "A/S 신청 관리" },
-            { href: "/admin/sms", label: "SMS 신청 관리" },
             { href: "/admin/used", label: "중고에어컨 신청 관리" },
             { href: "/admin/member", label: "회원 관리" },
             { href: "/admin/notice", label: "공지사항 관리" },
